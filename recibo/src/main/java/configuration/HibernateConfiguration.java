@@ -11,6 +11,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -33,7 +36,8 @@ public class HibernateConfiguration {
         return sessionFactory;
      }
      
-    @Bean
+   /*
+	@Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
@@ -42,7 +46,19 @@ public class HibernateConfiguration {
         dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
         return dataSource;
     }
-     
+     */
+	
+	@Bean
+    public DataSource dataSource() {
+		// no need shutdown, EmbeddedDatabaseFactoryBean will take care of this
+				EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+				EmbeddedDatabase db = builder
+					.setType(EmbeddedDatabaseType.H2) //.H2 or .DERBY
+					//.addScript("db/sql/create-db.sql")
+				//	.addScript("db/sql/insert-data.sql")
+					.build();
+				return db;
+    }
     private Properties hibernateProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));
