@@ -4,8 +4,16 @@ C:\Users\smor2004\git\recibos\recibo\src\main\java\controller\AppController.java
 C:\Users\smor2004\git\recibos\recibo\src\main\java\model\Employee.java
 C:\Users\smor2004\git\recibos\recibo\src\main\java\service\EmployeeService.java
 C:\Users\smor2004\git\recibos\recibo\src\main\java\dao\EmployeeDao.java
+C:\Users\smor2004\git\recibos\recibo\src\main\java\model\User.java
+C:\Users\smor2004\git\recibos\recibo\src\main\java\configuration\HelloWorldConfiguration.java
+C:\Users\smor2004\git\recibos\recibo\src\main\java\service\UserService.java
+C:\Users\smor2004\git\recibos\recibo\src\main\java\configuration\HelloWorldInitializer.java
 C:\Users\smor2004\git\recibos\recibo\src\main\java\dao\impl\EmployeeDaoImpl.java
+C:\Users\smor2004\git\recibos\recibo\src\main\java\controller\HelloWorldRestController.java
 C:\Users\smor2004\git\recibos\recibo\src\main\java\configuration\AppConfig.java
+C:\Users\smor2004\git\recibos\recibo\src\main\java\configuration\CORSFilter.java
 C:\Users\smor2004\git\recibos\recibo\src\main\java\configuration\HibernateConfiguration.java
 C:\Users\smor2004\git\recibos\recibo\src\main\java\dao\AbstractDao.java
 C:\Users\smor2004\git\recibos\recibo\src\main\java\docx\Run.java
+C:\Users\smor2004\git\recibos\recibo\src\main\java\service\impl\UserServiceImpl.java
+C:\Users\smor2004\git\recibos\recibo\src\main\java\controller\IndexController.java

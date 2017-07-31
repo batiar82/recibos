@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import model.Employee;
 import service.EmployeeService;
  
-@Controller
+//@Controller
 @RequestMapping("/")
 public class AppController {
  
